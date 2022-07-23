@@ -1,0 +1,9 @@
+export { default as IconLogo } from './Logo';
+export { default as IconCircle } from './Circle';
+export { default as IconSearch } from './Search';
+export { default as IconClose } from './Close';
+export { default as IconSun } from './IconSun';
+export { default as IconMoon } from './IconMoon';
+export { default as DashIcon1 } from './DashIcon1';
+export { default as DashIcon2 } from './DashIcon2';
+export { default as DashIcon3 } from './DashIcon3';
