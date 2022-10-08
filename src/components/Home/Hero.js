@@ -93,10 +93,6 @@ const StyledHero = styled.section`
     transform: rotate(-45deg);
   }
   @media (max-width: 750px) {
-  & > *:first-child {
-    min-height: 50vh;
-    padding-block-start: 20rem;
-  }
   &::before, &::after {
     content: none;
   }
@@ -151,7 +147,7 @@ const StyledCircleButton = styled.div`
     pointer-events: none;
   }
   @media (max-width: 750px) {
-    margin-block-start: 8rem;
+    margin-block-start: 2rem;
     & > button {
       right: 50%;
       transform: translateX(50%);

@@ -87,4 +87,7 @@ const StyleDashLook = styled.section`
       }
     }
   }
+  @media (max-width: 750px) {
+    padding-block: 5rem;
+  }
 `;

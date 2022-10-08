@@ -62,7 +62,7 @@ a {
     cursor: pointer;
 }
 h1 {
-    font-size: 3.52rem;
+    font-size: 3.032rem;
     font-family: 'Mutant';
 }
 h2 {font-size: 2.074rem;}
