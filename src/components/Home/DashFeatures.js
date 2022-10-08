@@ -8,7 +8,7 @@ const DashFeatures = () => {
   return (
     <StyledDashFeature>
         <Container>
-            <h2>And there is more! the 3-<b>POWERS</b>..</h2>
+            <h2>And there is more!</h2>
             <Flex justifyCenter gap='2rem'>
                 <Flex alignCenter spaceBetween flexColumn gap='4rem'>
                     <h4>Profile</h4>
@@ -38,18 +38,8 @@ const StyledDashFeature = styled.section`
     width: 100%;
     background: ${({ theme }) => theme.text};
     text-align: center;
-    padding-block: 10rem 6rem;
+    padding-block: 5rem;
     z-index: 1;
-    &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 0;
-        width: 100%;
-        height: 1.5rem;
-        border-radius: 0 0 10rem 10rem;
-        background: ${({ theme }) => theme.background};
-    }
     &::after {
         content: '';
         position: absolute;
@@ -69,7 +59,7 @@ const StyledDashFeature = styled.section`
         margin-inline: auto;
         color: ${({ theme }) => theme.background};
         & + div {
-            padding: 4rem 10vw;
+            padding: 4rem 10vw 0;
             & > * {
                 flex: 1;
                 height: auto;

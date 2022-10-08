@@ -83,7 +83,7 @@ const StyledUserInfo = styled.div`
   justify-content: center;
   gap: 1rem;
   width: min(750px, 90%);
-  background-color: #f8f7ff;
+  background-color: ${({ theme }) => theme.background};
   border-radius: 10px;
   padding: 4rem 2rem;
   text-align: center;
@@ -98,6 +98,7 @@ const StyledUserInfo = styled.div`
     & svg {
       width: 18px;
       height: auto;
+      color: ${({ theme }) => theme.text};
     }
   }
   & .avatar {
@@ -138,14 +139,14 @@ const StyledStats = styled.ul`
   list-style: none;
   margin-block-start: 1rem;
   & > li {
-    background: #fff;
+    background: ${({ theme }) => theme.light};
     padding: 1rem 2rem;
     border-radius: 6px;
     & span {
       display: block;
-      color: #777;
+      color: ${({ theme }) => theme.textLighter};
       &:first-child {
-        color: #121316;
+        color: ${({ theme }) => theme.text};
         font-weight: 500;
       }
     }

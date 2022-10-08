@@ -1,36 +1,30 @@
-import { useState, useContext, useRef } from "react";
+import { useContext } from "react";
 import UserContext from "../../Hooks/userContext";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { IconCircle, IconClose, IconSearch } from "../../assets/SVG";
+import { IconCircle, IconSearch } from "../../assets/SVG";
 import { Flex } from "../Styles/Flexbox";
 
 const Hero = () => {
-  const { setUsername } = useContext(UserContext);
+  const { username, setUsername } = useContext(UserContext);
 
-  const [isActive, setIsActive] = useState(false);
   const handleChange = (e) => setUsername(e.target.value);
   const navigate = useNavigate();
-  const ref = useRef(null);
 
-  const handleClick = () => {
-    ref.current.focus();
-    setIsActive(!isActive);
-  };
+  const handleSubmit = event => {
+    event.preventDefault();
+    if (username) {
+      return navigate("/dashboard");
+    } 
+  }
 
   return (
     <StyledHero>
       <Flex alignCenter justifyEnd flexColumn>
         <h1>Find Your Github Profile</h1>
         <form
-          className={isActive ? "active" : ""}
-          onSubmit={(e) => {
-            e.preventDefault();
-            navigate("/dashboard");
-          }}
-        >
+          onSubmit={handleSubmit}>
           <input
-            ref={ref}
             name="username"
             placeholder=":search username"
             type="text"
@@ -39,9 +33,7 @@ const Hero = () => {
         </form>
       </Flex>
       <StyledCircleButton>
-        <button className={isActive ? "active" : null} onClick={handleClick}>
-          {!isActive ? <IconSearch /> : <IconClose />}
-        </button>
+        <button onClick={handleSubmit}><IconSearch /></button>
         <IconCircle />
         <h2>A simple yet creative way to interact with your  GitHub profile.</h2>
         <p>Scroll Down</p>
@@ -57,22 +49,14 @@ export default Hero;
 const StyledHero = styled.section`
   position: relative;
   text-align: center;
-  height: 100%;
-  min-height: 100vh;
+  padding-top: 30vh;
   & > *:first-child {
-    position: relative;
     margin-inline: auto;
     width: min(600px, 100%);
-    padding-block: 22rem 2rem;
+    padding-bottom: 2rem;
     & form {
       width: 100%;
-      margin-block-end: -6rem;
-      opacity: 0;
       transition: ${({ theme }) => theme.transPrime};
-      &.active {
-        margin-block-end: -1rem;
-        opacity: 1;
-      }
       & input {
         display: block;
         border: 0;

@@ -45,19 +45,8 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  position: relative;
-  padding-block: 12.5rem 4rem;
+  padding-block: 5rem;
   text-align: center;
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 100%;
-    height: 1.5rem;
-    border-radius: 0 0 10rem 10rem;
-    background: ${({ theme }) => theme.text};
-  }
   & form {
     position: relative;
     width: min(500px, 90%);

@@ -4,7 +4,7 @@ import Mutant from "./Fonts/Mutant.otf";
 export const lightTheme = {
   purple: 'linear-gradient(120deg,#D270FF,#8338EC)',
   pink: '#FF006E',
-  background: 'radial-gradient(circle farthest-corner at 50% 50%,#f9fafe,#f9fafe 53%,#eff2f9)',
+  background: '#f8f9fe',
   text: '#121316',
   textLight: 'hsl(0, 0%, 13%)',
   textLighter: 'hsl(0, 0%, 30%)',
@@ -62,7 +62,7 @@ a {
     cursor: pointer;
 }
 h1 {
-    font-size: 3.052rem;
+    font-size: 3.52rem;
     font-family: 'Mutant';
 }
 h2 {font-size: 2.074rem;}

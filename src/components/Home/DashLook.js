@@ -10,7 +10,6 @@ const DashLook = () => {
       <Container>
         <img src={DashIMG} alt="nvnn mbjb" />
         <div>
-          <h2>It’s all about making things happen.</h2>
           <Flex alignCenter spaceBetween gap="2rem">
             <Flex alignCenter justifyCenter flexColumn gap='1rem'>
               <IoLogoReact />
@@ -40,7 +39,7 @@ export default DashLook;
 const StyleDashLook = styled.section`
   width: 100%;
   text-align: center;
-  padding-block: 6rem;
+  padding-block: 2rem;
   & > div > img {
     display: block;
     width: min(1080px, 100%);
@@ -48,7 +47,7 @@ const StyleDashLook = styled.section`
     margin-inline: auto;
   }
   & > div > div {
-    padding-block: 15rem 0;
+    padding-block: 2rem 0;
     & > div {
       padding-block: 4rem;
       & > * {

@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import UserContext from "../../Hooks/userContext";
 import styled from "styled-components";
 import { Flex } from "../Styles/Flexbox";
-import { IconSun, IconMoon } from "../../assets/SVG";
+import { BiMoon, BiSun } from "react-icons/bi";
 import RateLimit from "./RateLimit";
 import UserInfo from "./UserInfo";
 
@@ -41,7 +41,7 @@ const Header = ({ theme, themeToggler, userData, rateLimit }) => {
         </form>
 
         <button onClick={themeToggler}>
-          {theme === "light" ? <IconMoon /> : <IconSun />}
+          {theme === "light" ? <BiMoon /> : <BiSun />}
         </button>
       </Flex>
 
@@ -102,14 +102,15 @@ const StyledHeader = styled.header`
       }
     }
     & button {
-      width: 44px;
-      height: 44px;
-      background: ${({ theme }) => theme.text};
+      background: transparent;
       border: 0;
-      border-radius: 100%;
       cursor: pointer;
-      & path {
-        fill: ${({ theme }) => theme.background};
+      & svg {
+        width: 30px;
+        height: 30px;
+        & path {
+          fill: ${({ theme }) => theme.text};
+        }
       }
     }
   }
