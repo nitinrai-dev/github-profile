@@ -97,6 +97,9 @@ const StyledHero = styled.section`
     content: none;
   }
   }
+  @media (max-width: 540px) {
+    padding-top: 45vh;
+  }
 `;
 
 // Circle Button
