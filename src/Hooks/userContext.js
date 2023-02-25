@@ -1,9 +1,14 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState(window.localStorage.getItem('username'));
+
+  useEffect(() => {
+    window.localStorage.setItem('username', username);
+    setUsername(username);
+  }, [username]);
 
   const value = {
     username,
